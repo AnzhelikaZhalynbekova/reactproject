@@ -6,7 +6,7 @@ const PersonInfo = () => {
 
   // Function to show a message when the button is clicked
   const handleClick = () => {
-    setMessage("Button was clicked!");
+    setMessage("You clicked and...");
   };
 
   return (
@@ -19,11 +19,11 @@ const PersonInfo = () => {
       <p><strong>Age:</strong> 28</p>
       <p><strong>Hobbies:</strong> Traveling, Photography, Sky-diving</p>
 
+      {/* Display the message above the button */}
+      {message && <p>{message}</p>}
+
       {/* Button to trigger the message */}
       <button onClick={handleClick}>Click Me</button>
-
-      {/* Display the message when the button is clicked */}
-      {message && <p>{message}</p>}
     </div>
   );
 };
