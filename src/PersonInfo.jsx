@@ -10,7 +10,11 @@ const PersonInfo = () => {
   // Function to handle button click
   const handleClick = () => {
     setMessage("Button was clicked!");
-    setJobTitle("Senior Software Engineer"); // Update the job title
+    
+    // Toggle job title between "Software Engineer" and "Senior Software Engineer"
+    setJobTitle(prevJobTitle => 
+      prevJobTitle === "Software Engineer" ? "Chief Technical Officer" : "Software Engineer"
+    );
   };
 
   return (
@@ -26,7 +30,7 @@ const PersonInfo = () => {
       {/* Display the message above the button */}
       {message && <p>{message}</p>}
 
-      {/* Change button text to 'Повысить в должности' */}
+      {/* Button Text */}
       <button onClick={handleClick}>Повысить в должности</button>
     </div>
   );
