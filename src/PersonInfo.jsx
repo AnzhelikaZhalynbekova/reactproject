@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 
 const PersonInfo = () => {
-  // State to manage the message visibility
+  // State for the message
   const [message, setMessage] = useState("");
+  
+  // State for the job title
+  const [jobTitle, setJobTitle] = useState("Software Engineer");
 
-  // Function to show a message when the button is clicked
+  // Function to handle button click
   const handleClick = () => {
-    setMessage("You clicked and...");
+    setMessage("Button was clicked!");
+    setJobTitle("Senior Software Engineer"); // Update the job title
   };
 
   return (
     <div>
       <h1>Person Information</h1>
       <p><strong>Name:</strong> Anzhelika Zhalynbekova</p>
-      <p><strong>Job Title:</strong> Software Engineer</p>
+      <p><strong>Job Title:</strong> {jobTitle}</p>
       <p><strong>Company:</strong> NASA</p>
       <p><strong>Location:</strong> Washington, USA</p>
       <p><strong>Age:</strong> 28</p>
@@ -22,8 +26,8 @@ const PersonInfo = () => {
       {/* Display the message above the button */}
       {message && <p>{message}</p>}
 
-      {/* Button to trigger the message */}
-      <button onClick={handleClick}>Click Me</button>
+      {/* Change button text to 'Повысить в должности' */}
+      <button onClick={handleClick}>Повысить в должности</button>
     </div>
   );
 };
