@@ -10,7 +10,7 @@ const PersonInfo = () => {
   // Function to handle button click
   const handleClick = () => {
     setMessage("Button was clicked!");
-    setJobTitle("Senior Software Engineer"); // Update the job title
+    setJobTitle("Senior Software Engineer");
   };
 
   return (
